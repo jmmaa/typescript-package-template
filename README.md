@@ -6,8 +6,7 @@ You can also use this template for simply learning how to get started on making 
 
 ## Get Started
 
-Clone the repo with your preferred project name
-
+Start with this [template](https://github.com/jmmaa/typescript-package-template/generate) or clone the repo with your preferred package name
 ```
 git clone https://github.com/jmmaa/typescript-package-template.git <your package name>
 ```

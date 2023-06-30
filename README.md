@@ -14,7 +14,7 @@ git clone https://github.com/jmmaa/typescript-package-template.git <your package
 
 Specify project details
 
-```json
+```js
 // package.json
 
 {

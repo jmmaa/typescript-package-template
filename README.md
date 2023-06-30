@@ -1,6 +1,6 @@
 # Typescript Package Template
 
-This repository provides a minimal and robust template for getting started on your own pure Typescript package. It is barebones and uses only Typescript CLI as its build tool.
+This repository provides a minimal and robust template for getting started on your own pure Typescript package. It is barebones and uses Typescript CLI as its build tool.
 
 You can also use this template for simply learning how to get started on making your own Typescript package.
 

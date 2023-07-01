@@ -6,7 +6,7 @@ You can also use this template for simply learning how to get started on making 
 
 ## Get Started
 
-Start with this [template](https://github.com/jmmaa/typescript-package-template/generate) or clone the repo with your preferred package name
+Create a new [repo](https://github.com/jmmaa/typescript-package-template/generate) or clone it with your preferred package name
 ```
 git clone https://github.com/jmmaa/typescript-package-template.git <your package name>
 ```
@@ -29,7 +29,7 @@ npm install
 npm run build
 ```
 
-Then test if everything is working properly
+Test if everything is working properly
 
 ```
 npm test
@@ -47,23 +47,26 @@ By default, the template is only capable of testing your package by importing yo
 
 If you want to test your package as if you're the consumer
 
+Build the package tarball
 ```
 npm run build
 npm install -D file:build/<your package tarball name>
 ```
 
-> **Note:** You have to rebuild the package by repeating the commands above if you want to have updated changes.
-
-Now you can write tests using the name of your package
+Now you can import your package using its name!
 
 ```typescript
 import { add, mul } from "typescript-package-template";
 
 test("build", () => {
   expect(add(1, 2, 3)).toEqual(6);
-
   expect(mul(4, 5, 6)).toEqual(120);
 });
+```
+Its a completely isolated code so you will need to install it again to reflect the changes you've made
+
+```
+npm install typescript-package-template
 ```
 
 ## References

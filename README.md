@@ -6,9 +6,11 @@ You can also use this template for simply learning how to get started on making 
 
 ## Get Started
 
-Create a new [repo](https://github.com/jmmaa/typescript-package-template/generate) or clone it with your preferred package name
+Let's say I want to make a package named "my-cool-package"
+
+Create a new [repo](https://github.com/jmmaa/typescript-package-template/generate) or clone this
 ```
-git clone https://github.com/jmmaa/typescript-package-template.git <your package name>
+git clone https://github.com/jmmaa/typescript-package-template.git my-cool-package
 ```
 
 Specify project details
@@ -17,7 +19,7 @@ Specify project details
 // package.json
 
 {
-    "name": "your-package-name",
+    "name": "my-cool-package",
     ...
 }
 ```
@@ -50,23 +52,26 @@ If you want to test your package as if you're the consumer
 Build the package tarball
 ```
 npm run build
-npm install -D file:build/<your package tarball name>
 ```
+Install the package locally from the tarball
+```
+npm install -D file:build/my-cool-package-0.0.1.tgz
+```
+> **Note**: you can find the package tarball inside the `/build` folder after runnning `npm run build`
 
 Now you can import your package using its name!
 
 ```typescript
-import { add, mul } from "typescript-package-template";
+import { add, mul } from "my-cool-package";
 
 test("build", () => {
   expect(add(1, 2, 3)).toEqual(6);
   expect(mul(4, 5, 6)).toEqual(120);
 });
 ```
-Its a completely isolated code so you will need to install it again to reflect the changes you've made
-
+The local package is decoupled from the project, so you will need to install it again to reflect the changes you've made
 ```
-npm install typescript-package-template
+npm install my-cool-package
 ```
 
 ## References

@@ -6,7 +6,7 @@ You can also use this template for simply learning how to get started on making 
 
 ## Get Started
 
-Let's say I want to make a package named "my-cool-package"
+Let's say I want to make a package named "my-shiny-new-package"
 
 Create a new [repo](https://github.com/jmmaa/typescript-package-template/generate) or clone this
 ```

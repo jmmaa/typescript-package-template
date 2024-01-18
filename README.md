@@ -10,16 +10,15 @@ Let's say I want to make a package named "my-cool-package"
 
 Create a new [repo](https://github.com/jmmaa/typescript-package-template/generate) or clone this
 ```
-git clone https://github.com/jmmaa/typescript-package-template.git my-cool-package
+git clone https://github.com/jmmaa/typescript-package-template.git my-shiny-new-package
 ```
 
 Specify project details
 
-```js
+```json
 // package.json
-
 {
-    "name": "my-cool-package",
+    "name": "my-shiny-new-package",
     ...
 }
 ```
@@ -30,6 +29,8 @@ Then run
 npm install
 npm run build
 ```
+This will generate the library code into the `/lib` directory.
+
 
 Test if everything is working properly
 
@@ -37,15 +38,13 @@ Test if everything is working properly
 npm test
 ```
 
-If you're developing
+If you're developing 
 
 ```
 npm run dev
 ```
 
-## Test Your Package Locally (Optional)
-
-By default, the template is only capable of testing your package by importing your generated library code from `/lib` to the `/tests` directory. This is for fast development process.
+## Test Your Package Build Locally (Optional)
 
 If you want to test your package as if you're the consumer
 
@@ -55,21 +54,24 @@ npm run build
 ```
 Install the package locally from the tarball
 ```
-npm install -D file:build/my-cool-package-0.0.1.tgz
+npm install -D file:build/my-shiny-new-package
 ```
-> **Note**: you can find the package tarball inside the `/build` folder after runnning `npm run build`
+> **Note**: you can find the package tarball inside the `/build` folder after running `npm run build`
 
 Now you can import your package using its name!
 
 ```typescript
-import { add, mul } from "my-cool-package";
+import { add, mul } from "my-shiny-new-package";
 
 test("build", () => {
+
   expect(add(1, 2, 3)).toEqual(6);
+
   expect(mul(4, 5, 6)).toEqual(120);
 });
 ```
 The local package is decoupled from the project, so you will need to install it again to reflect the changes you've made
+
 ```
 npm install my-cool-package
 ```

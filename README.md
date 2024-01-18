@@ -73,7 +73,7 @@ test("build", () => {
 The local package is decoupled from the project, so you will need to install it again to reflect the changes you've made
 
 ```
-npm install my-cool-package
+npm install my-shiny-new-package
 ```
 
 ## References

@@ -15,7 +15,7 @@ git clone https://github.com/jmmaa/typescript-package-template.git my-shiny-new-
 
 Specify project details
 
-```json
+```js
 // package.json
 {
     "name": "my-shiny-new-package",

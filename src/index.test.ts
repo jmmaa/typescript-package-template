@@ -1,6 +1,6 @@
 import { add, mul } from ".";
 
-test("lib", () => {
+test("add and multipy", () => {
 
   expect(add(1, 2, 3)).toEqual(6);
 
